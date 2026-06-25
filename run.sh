@@ -41,7 +41,10 @@ fi
 # Activate environment and install dependencies
 echo -e "${YELLOW}>> Activating venv and installing required packages...${NC}"
 source venv/bin/activate
+echo -e "${YELLOW}>> Upgrading pip..."
 pip install --upgrade pip --quiet
+echo -e "${YELLOW}>> Installing Required packages..."
+echo -e "${Red}>> Please Be Patient..."
 pip install -r requirements.txt --quiet
 
 # Launch web dashboard

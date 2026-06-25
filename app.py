@@ -53,7 +53,7 @@ with st.sidebar:
             client = None
 
 # --- Main Page Layout ---
-st.header("BullBearAI: Candlestick Pattern Predictor", divider="red")
+st.header("BullBearAI: Candlestick Pattern Predictor", divider="red",text_alignment="center")
 
 # Center columns for image upload
 _, centre_co, _ = st.columns(spec=[1, 2, 1], gap="medium")

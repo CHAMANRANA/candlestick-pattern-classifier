@@ -27,9 +27,11 @@ if (-Not (Test-Path -Path "venv")) {
 }
 
 # Activate environment and install dependencies
-Write-Host ">> Activating venv and installing required packages..." -ForegroundColor Yellow
 & .\venv\Scripts\Activate.ps1
+Write-Host ">> Upgrading pip..." -ForegroundColor Yellow
 python -m pip install --upgrade pip | Out-Null
+Write-Host ">> Installing required packages..." -ForegroundColor Yellow
+Write-Host ">> Please Be Patient..." -ForegroundColor Red
 pip install -r requirements.txt
 
 # Launch web dashboard
