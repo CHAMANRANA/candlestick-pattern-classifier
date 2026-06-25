@@ -70,7 +70,7 @@ if uploaded_image:
 
     with centre_co:
         img = Image.open(uploaded_image).convert('RGB')
-        st.image(img, use_container_width=True)
+        st.image(img, width="stretch")
         
         # Model Selector
         available_models = ["Local ResNet-18 Model"]
@@ -84,7 +84,7 @@ if uploaded_image:
         )
         
         # The Button sets the session state to True
-        if st.button("Run Prediction Analysis", use_container_width=True):
+        if st.button("Run Prediction Analysis", width="stretch"):
             st.session_state.run_analysis = True
 
     # --- Results Rendering Block ---
