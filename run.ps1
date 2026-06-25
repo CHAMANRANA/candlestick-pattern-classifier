@@ -26,16 +26,18 @@ if (-Not (Test-Path -Path "venv")) {
     Write-Host ">> Virtual environment created." -ForegroundColor Green
 }
 
-# Activate environment and install dependencies
-& .\venv\Scripts\Activate.ps1
+# Use explicit paths to the venv executables to bypass ExecutionPolicy issues
+$VenvPython = ".\venv\Scripts\python.exe"
+
 Write-Host ">> Upgrading pip..." -ForegroundColor Yellow
-python -m pip install --upgrade pip | Out-Null
+& $VenvPython -m pip install --upgrade pip | Out-Null
+
 Write-Host ">> Installing required packages..." -ForegroundColor Yellow
 Write-Host ">> Please Be Patient..." -ForegroundColor Red
-pip install -r requirements.txt
+& $VenvPython -m pip install -r requirements.txt
 
 # Launch web dashboard
 Write-Host ">> Booting Streamlit interface..." -ForegroundColor Green
 Write-Host "======================================================" -ForegroundColor Cyan
 
-streamlit run app.py
+& $VenvPython -m streamlit run app.py
