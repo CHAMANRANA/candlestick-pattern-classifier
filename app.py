@@ -26,7 +26,7 @@ st.set_page_config(
     page_title="BullBearAI: 3-Class Candlestick Classifier",
     layout="wide",
     initial_sidebar_state="auto",
-    page_icon="📈"
+    page_icon="src/assets/icon.png"
 )
 
 # Initialize Session States to prevent layout collapse
