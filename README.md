@@ -20,6 +20,25 @@ A machine learning web app that treats stock chart analysis as a computer vision
 
 ---
 
+## 📋 Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+- 🐍 **Python 3.10 or later**
+- 🌿 **Git**
+
+You can verify your installation by running:
+
+```bash
+python --version
+git --version
+```
+
+If either command is not recognized, install them first:
+
+- **Python:** https://www.python.org/downloads/
+- **Git:** https://git-scm.com/downloads
+
 # 💻 Local Setup (One-Click Launch)
 
 ### macOS / Linux
@@ -61,7 +80,7 @@ You can modify the scripts to:
 
 # 📺 Video Explanation
 
-*Coming Soon...*
+[Can a ResNet-18 Model Predict Stock Candlestick Patterns?](https://youtu.be/GnieOqMdxVg)
 
 ---
 
